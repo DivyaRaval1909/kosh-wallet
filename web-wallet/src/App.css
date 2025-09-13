@@ -1,0 +1,289 @@
+/* Modal styles for confirmation dialog */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-box {
+  background: var(--box-bg);
+  color: var(--text);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.modal-message {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.modal-actions {
+  display: flex;
+  gap: 1.2rem;
+}
+/* Red clear button for wallet deletion */
+.clear-btn-red {
+  background: #575656;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.clear-btn-red:hover {
+  background: #2f2f2f;
+  color: #fff;
+}
+.mnemonic-2row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+.mnemonic-row-group {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+}
+/* Theme variables */
+:root {
+  --bg: #f8fafc;
+  --text: #222;
+  --box-bg: #fff;
+  --box-border: #e2e8f0;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --accent: #818cf8;
+  --accent-hover: #818cf8;
+  --input-bg: #f8fafc;
+  --input-border: #cbd5e1;
+}
+
+.dark-mode {
+  --bg: #18181b;
+  --text: #f4f4f5;
+  --box-bg: #23232a;
+  --box-border: #33334d;
+  --primary: #6366f1;
+  --primary-hover: #818cf8;
+  --accent: #818cf8;
+  --accent-hover: #818cf8;
+  --input-bg: #23232a;
+  --input-border: #33334d;
+}
+
+body, .app-container {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-container {
+  max-width: 10000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+.wallet-box {
+  background: var(--box-bg);
+  border-radius: 20px;
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.10);
+  padding: 3.5rem 2.5rem 3.5rem 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-right: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--box-border);
+  min-width: 440px;
+  min-height: 260px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.mnemonic-box {
+  border: 2px solid var(--box-border);
+  width: 100%;
+  max-width: 700px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.mnemonic-word-btn {
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1.5px solid var(--primary);
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-size: 1.1rem;
+  margin: 0.2rem 0.3rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+}
+.mnemonic-word-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary-hover);
+}
+.mnemonic-placeholder {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.mnemonic-row {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.mnemonic-input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  background: var(--input-bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.mnemonic-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.mnemonic-btn:hover {
+  background: var(--primary-hover);
+}
+
+.copy-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.copy-btn:disabled {
+  background: var(--input-border);
+  cursor: not-allowed;
+}
+.copy-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.wallets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+ 
+}
+
+.theme-toggle-btn {
+  position: absolute;
+
+  right: 24px;
+  background: none;
+  border: 2px solid var(--box-border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  z-index: 10;
+}
+.theme-toggle-btn:hover {
+  background: var(--box-bg);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #4c0455aa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
