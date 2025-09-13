@@ -10,7 +10,7 @@ A modern, open-source web wallet for Ethereum and Solana, built with React and V
 - Mnemonic displayed as interactive buttons (6x2 layout)
 - Clear all wallets with confirmation modal
 - Branded, minimal design
-- Built with ❤️ by wdiv19
+- Built with ❤️ by Divya Raval
 
 ## Getting Started
 
